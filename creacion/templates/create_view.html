@@ -1,0 +1,33 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css.css' %}">
+<form action="/creacion_json" method="POST" id="myForm" enctype="multipart/form-data"> 
+  
+    <!-- Security token -->
+    {% csrf_token %} 
+  
+    <!-- Using the formset -->
+    <div>
+        <label for="Title">titulo </label>
+        <input id="Title" name="titulo"
+        class="jsvalidator" 
+        data-validators="required"
+        type="text">
+    </div>
+    <div>
+        <label for="descripcion">descripción </label>
+        <input id="descripcion" name="descripcion" data-validators="required" type="text">
+    </div>
+
+      
+    <input type="submit" value="Submit"> 
+</form> 
+
+<script src="{% static 'jsvalidator.js' %}"></script>
+
+<script>
+
+    const myFormValidator = new JSValidator('myForm').init().setAjax();
+    
+
+
+</script>

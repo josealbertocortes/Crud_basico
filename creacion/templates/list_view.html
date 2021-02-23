@@ -1,0 +1,16 @@
+<div class="main"> 
+    <a href='{% url "crud:create" %}'>Creacion</a>
+    <br>
+    {% for data in dataset %}
+    
+    {{ data.title }}</a><br/> 
+    {{ data.description }}<br/> 
+    <button><a href="{% url 'crud:update' data.id %}">Update</a></button>
+    <button><a href="{% url 'crud:delete' data.id %}">Delete</a></button>
+    <button><a href="{% url 'crud:detail' data.id  %}">Mas detalles</a></button>
+    <hr/> 
+    
+  
+    {% endfor %} 
+  
+</div> 

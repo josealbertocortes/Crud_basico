@@ -1,0 +1,24 @@
+.error-msg{
+    display: block;
+    color: red;
+}
+
+.mensaje_recibido{
+    display: block;
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.mesaje_contenido{
+    display: flex;
+    height: 40px;
+    
+    color: green;
+    font-size: 1.2em;
+    border: 1px solid rgba(0, 0, 0, 1);
+    box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.5) ;
+}

@@ -1,0 +1,14 @@
+<div class="main"> 
+    <!-- Create a Form -->
+    <form method="POST"> 
+        <!-- Security token by Django -->
+        {% csrf_token %} 
+  
+        <label for="Title">titulo </label>
+        <input id="Title" value="{{titulo}}" name="titulo" type="text">
+        <label for="descripcion">descripción </label>
+        <input id="descripcion" value="{{descripcion}}" name="descripcion" type="text">
+        <input type="submit" value="Update"> 
+    </form> 
+  
+</div> 

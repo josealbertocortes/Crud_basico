@@ -1,0 +1,12 @@
+<div class="main"> 
+      <button><a href="/">regresar</a></button><br>
+    
+
+    <!-- Specify fields to be displayed -->
+    {{ data.title }}<br/> 
+    {{ data.description }}<br/> 
+  
+
+    <button><a href="{% url 'crud:update' data.id %}">Update</a></button>
+    <button><a href="{% url 'crud:delete' data.id %}">Delete</a></button>
+</div> 
